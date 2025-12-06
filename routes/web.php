@@ -29,6 +29,8 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Pasien CRUD routes
 Route::resource('pasien', PasienController::class);
+Route::delete('/pasien/{id}', [PasienController::class, 'destroy']);
 
 // Rumah Sakit CRUD routes
 Route::resource('rumah-sakit', RumahSakitController::class);
+Route::delete('/rumah-sakit/{id}', [RumahSakitController::class, 'destroy']);
